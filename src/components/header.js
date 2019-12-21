@@ -6,27 +6,31 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      marginRight: `1.45rem`,
+      height: `100vh`,
+      maxWidth: 200,
+      position: `fixed`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        margin: `auto 0`,
+        padding: `2rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <span style={{ color: "#ffffff" }}>Conner Jensen</span>
+      <ul
+        style={{
+          listStyle: `none`,
+          color: "#ffffff",
+          margin: `50px 0`,
+        }}
+      >
+        <li>About</li>
+        <li>Skills</li>
+        <li>Portfolio</li>
+        <li>Contact</li>
+      </ul>
     </div>
   </header>
 )
