@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import "./main.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,20 +25,36 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "200px 1fr",
+        justifyContent: "center",
+      }}
+    >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
           maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
+          paddingLeft: "1rem",
+          paddingTop: "2rem",
+          gridColumn: 2,
         }}
       >
+        <div className="bouncer">
+          <div className="bouncer-inner"></div>
+        </div>
+        <div className="bouncer2">
+          <div className="bouncer-inner2"></div>
+        </div>
+        <div className="bouncer3">
+          <div className="bouncer-inner3"></div>
+        </div>
+
         <main>{children}</main>
         <footer></footer>
       </div>
-    </>
+    </div>
   )
 }
 

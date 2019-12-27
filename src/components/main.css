@@ -1,0 +1,32 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+a {
+  text-decoration: none;
+}
+
+a li {
+  color: white;
+  padding: 0.6rem;
+}
+
+a li:hover {
+  color: #333;
+}
+
+.activeLink {
+  background: rgb(62, 78, 80);
+  background: linear-gradient(
+    90deg,
+    rgba(62, 78, 80, 1) 0%,
+    rgba(245, 172, 114, 0.3449754901960784) 100%
+  );
+  cursor: default;
+}
+
+.activeLink:hover {
+  color: #fff;
+}

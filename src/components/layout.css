@@ -385,6 +385,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: sans-serif;
 }
 figure {
   margin-left: 0;
@@ -618,5 +619,175 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+.bouncer {
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  background: #f5ac72;
+  position: absolute;
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  left: 0px;
+  top: 0px;
+  box-shadow: 30px 30px 100px #f5ac72;
+  opacity: 0.3;
+}
+
+.bouncer-inner {
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background: rgb(62, 78, 80);
+  position: relative;
+  animation-name: spin;
+  animation-duration: 9.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  left: 0px;
+  top: 0px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(900deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    left: 0px;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  33% {
+    left: 90vw;
+    top: 90vh;
+    transform: rotate(1000deg);
+  }
+  66% {
+    left: 90vw;
+    top: 50vh;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.bouncer2 {
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  background: #f5ac72;
+  position: absolute;
+  animation-name: bounce2;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  right: 0px;
+  top: 0px;
+  box-shadow: 30px 30px 100px #f5ac72;
+  opacity: 0.3;
+}
+
+.bouncer-inner2 {
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background: rgb(62, 78, 80);
+  position: relative;
+  animation-name: spin2;
+  animation-duration: 9.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  right: 0px;
+  top: 0px;
+}
+
+@keyframes spin2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(900deg);
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    right: 20vw;
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  33% {
+    right: 90vw;
+    top: 90vh;
+    transform: rotate(1000deg);
+  }
+  66% {
+    right: 90vw;
+    top: 50vh;
+  }
+  100% {
+    right: 20vw;
+    top: 0px;
+  }
+}
+
+.bouncer3 {
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  background: rgb(62, 78, 80);
+  position: absolute;
+  animation-name: bounce2;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  right: 0px;
+  top: 0px;
+  box-shadow: 30px 30px 100px rgb(62, 78, 80);
+  opacity: 0.3;
+}
+
+.bouncer-inner3 {
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background: #f5ac72;
+  position: relative;
+  animation-name: spin2;
+  animation-duration: 9.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  right: 0px;
+  top: 0px;
+}
+
+@keyframes spin3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(900deg);
+  }
+}
+
+@keyframes bounce3 {
+  0% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    right: 20vw;
+    top: 0px;
   }
 }
